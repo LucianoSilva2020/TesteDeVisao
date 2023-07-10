@@ -1,0 +1,293 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+header{
+    width: 100vw;
+    height: 100px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 30px;
+}
+#imgLogo{
+    max-width: 100%;
+    max-height: 70px;
+}
+header button, #closeMenu{
+    border: none;
+    background-color: white;
+    justify-self: flex-end;
+}
+p{
+    text-align: center;
+}
+#modal{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+    transition: .5s;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.242);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+#menu{
+    width: 500px;
+    background-color: white;
+    padding: 22px;
+    padding-top: 100px;
+    overflow: auto;
+    transform: translateX(400px);
+    transition: .5s;
+    position: relative;
+}
+.card{
+    margin-left: 20px;
+    display: flex;
+    gap: 20px;
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.card input{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #006fa6;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+#closeMenu{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+main{
+    width: 800px;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#startTesteInput{
+    height: 50px;
+    width: 200px;
+    background-color: #008bd0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+#question{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#divAstigmatism{
+    margin-top: 100px;
+    text-align: center;
+}
+#divQuestion{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#divTable{
+    width: 100%;
+    height: 300px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    position: relative;
+}
+#divTable svg{
+    z-index: 1;
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+#divTable .material-symbols-outlined{
+    font-size: 80px;
+}
+.answer{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .25s;
+}
+#correctAnswer{
+    background-color: green;
+}
+#incorrectAnswer{
+    background-color: red;
+}
+
+.TOPLEFT{
+    transform: rotate(-45deg);
+}
+.TOP{
+    transform: rotate(0deg);
+}
+.TOPRIGHT{
+    transform: rotate(45deg);
+}
+.LEFT{
+    transform: rotate(-90deg);
+}
+.RIGHT{
+    transform: rotate(90deg);
+}
+.BOTTOMLEFT{
+    transform: rotate(-135deg);
+}
+.BOTTOM{
+    transform: rotate(180deg);
+}
+.BOTTOMRIGHT{
+    transform: rotate(135deg);
+}
+.debitCard{
+    width: 350px;
+}
+#divImgCalib{
+    height: 50vh;
+}
+.containerResult{ 
+    width: 80vw;
+    height: 300px;
+    background-color: #f3f4f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+.titleResult{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.descriptionResult{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    font-size: 21px;
+    border-bottom: 2px solid black;
+}
+.imgResult a{
+    background-color: rgb(0, 224, 0);
+    padding: 10px 50px;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid green;
+
+}
+#Resultbtn{
+    height: 50px;
+    padding: 0px 20px;
+    white-space: nowrap;
+    background-color: #008bd0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.divCalibrate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+form input{
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+}
+form button{
+    height: 35px;
+
+}
+@media (max-width: 800px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex !important;
+    }
+    .containerResult{
+        width: 90vw;
+    }
+    main{
+        width: 100vw;
+    }
+    form{
+        width: 80%;
+    }
+}
+@media (max-width: 650px){
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 15px;
+    }
+    .descriptionResult{
+        font-size: 15px;
+    }
+    .divArrow{
+        width: 70px;
+        height: 70px;
+    }
+}
