@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica Santista</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/testStyle.css">
+    <link rel="stylesheet" href="./src/styles/loadScreen.css">
+    <link rel="stylesheet" href="./src/styles/tutorial.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <header>
+        <img src="./src/imagens/logo.jpg" alt="logo" id="imgLogo" onclick="reloadPade()">
+        <div id="staticEye">
+        </div>
+        <button onclick="openMenu()">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+    </header>
+    <main>
+        <video src="src/video/eye-animate-2x.mp4" width="200px" muted autoplay></video>
+        <h1>Teste visual Online</h1>
+        <input type="button" onclick="startTest('full')" id="startTesteInput" value="Começar teste"/>    
+    </main>
+    <div id="modal">
+        <div id="menu">
+            <button id="closeMenu" onclick="closeMenu()">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+            <div class="card" onclick="startInMenu('acuity')">
+                <img src="./src/imagens/acuity-test.svg" alt="Logo-Acuidade">
+                <h1>Acuidade visual</h1>
+            </div>
+            <div class="card" onclick="startInMenu('contrast')">
+                <img src="./src/imagens/contrast-test.svg" alt="Logo-VisãoDeContraste">
+                <h1>Visão de contraste</h1>
+            </div>
+            <div class="card" onclick="startInMenu('colors')">
+                <img src="./src/imagens/color-test.svg" alt="Logo-VisãoDasCores">
+                <h1>Visão das cores</h1>
+            </div>
+            <div class="card" onclick="startInMenu('astigmatism')">
+                <img src="./src/imagens/astigmatism-test.svg" alt="Logo-Astigmatismo">    
+                <h1>Astigmatismo</h1>
+            </div>
+            <div class="card" onclick="startInMenu('visual-field')" >
+                <img src="./src/imagens/amsler-test.svg" alt="Logo-CampoVisual">
+                <h1>Campo Visual</h1>
+            </div>
+            
+        </div>
+    </div>
+    <script src="./src/scripts/baseFunctions.js"></script>
+    <script src="./src/scripts/loadScreen.js"></script>
+    <script src="./src/scripts/tutorial.js"></script>
+    <script src="./src/scripts/testAcuity.js"></script>
+    <script src="./src/scripts/testContrast.js"></script>
+    <script src="./src/scripts/testColors.js"></script>
+    <script src="./src/scripts/testAstigmatism.js"></script>
+    <script src="./src/scripts/testVisual-field.js"></script>
+    <script src="./src/scripts/script.js"></script>
+</body>
+</html>
